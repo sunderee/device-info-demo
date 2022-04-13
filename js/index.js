@@ -46,16 +46,16 @@ const getBatteryData = async () => {
 };
 
 const geolocateIP = async () => {
-    const rawResult = await makeAPIRequest("GET", "http://ip-api.com/json");
+    const rawResult = await makeAPIRequest("GET", "https://ipwhois.app/json/");
     const result = JSON.parse(rawResult);
     return new GeoIPModel(
         result.city,
-        result.regionName,
+        result.region,
         result.country,
-        result.lat,
-        result.lon,
+        result.latitude,
+        result.longitude,
         result.isp,
-        result.query
+        result.ip
     );
 };
 
