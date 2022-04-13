@@ -94,8 +94,9 @@ async function populateWebsiteData() {
 
     const ipData = await geolocateIP();
     document.getElementById('ip-address').innerHTML = ipData.ipAddress;
-    document.getElementById('ip-location').innerHTML = [ipData.city, ipData.region, ipData.country].filter((value) => value != undefined).join(', ');
+    document.getElementById('ip-location').innerHTML = [ipData.city, ipData.region, ipData.country].join(', ');
     document.getElementById('ip-isp').innerHTML = ipData.isp;
 }
 
+console.log('For source code, visit https://github.com/sunderee/device-info-demo');
 populateWebsiteData();
