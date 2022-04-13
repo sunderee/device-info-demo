@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Device Info</title>
+    <meta name="description" content="What info can your browser tell about you">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="bg-white shadow overflow-hidden sm:rounded-lg">
+        <div class="px-4 py-5 sm:px-6">
+            <h3 class="text-lg leading-6 font-medium text-gray-900">Device info</h3>
+            <p class="mt-1 max-w-2xl text-sm text-gray-500">What info can your browser tell about you</p>
+        </div>
+        <div class="border-t border-gray-200">
+            <dl>
+                <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <dt class="text-sm font-medium text-gray-500">Operating system</dt>
+                    <dd id="os" class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">Awaiting OS data...</dd>
+                </div>
+                <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <dt class="text-sm font-medium text-gray-500">Browser</dt>
+                    <dd id="browser" class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                        Awaiting browser data...
+                    </dd>
+                </div>
+                <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <dt class="text-sm font-medium text-gray-500">Battery percentage</dt>
+                    <dd id="battery-percentage" class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                        Awaiting battery info...
+                    </dd>
+                </div>
+                <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <dt class="text-sm font-medium text-gray-500">Battery status</dt>
+                    <dd id="battery-charging" class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                        Awaiting battery info...
+                    </dd>
+                </div>
+                <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <dt class="text-sm font-medium text-gray-500">IP Address</dt>
+                    <dd id="ip-address" class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                        Awaiting IP geolocation data...
+                    </dd>
+                </div>
+                <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <dt class="text-sm font-medium text-gray-500">Your location</dt>
+                    <dd id="ip-location" class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                        Awaiting IP geolocation data...
+                    </dd>
+                </div>
+                <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                    <dt class="text-sm font-medium text-gray-500">Internet service provider</dt>
+                    <dd id="ip-isp" class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                        Awaiting IP geolocation data...
+                    </dd>
+                </div>
+            </dl>
+        </div>
+    </div>
+
+    <script src="js/platform.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
