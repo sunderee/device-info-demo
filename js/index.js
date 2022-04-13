@@ -94,7 +94,7 @@ async function populateWebsiteData() {
 
     const ipData = await geolocateIP();
     document.getElementById('ip-address').innerHTML = ipData.ipAddress;
-    document.getElementById('ip-location').innerHTML = [ipData.city, ipData.region, ipData.country].filter((value) => value != null).join(', ');
+    document.getElementById('ip-location').innerHTML = [ipData.city, ipData.region, ipData.country].filter((value) => value != undefined).join(', ');
     document.getElementById('ip-isp').innerHTML = ipData.isp;
 }
 
